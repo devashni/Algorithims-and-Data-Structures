@@ -43,3 +43,5 @@ def sumDigits(num):
 # ! Test case: SumDigits
 # sumDigits(345) -> 12
 # sumDigits(45) -> 9
+
+
