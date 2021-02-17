@@ -115,3 +115,52 @@ class MyLinkedList:
         if current == self.tail:
             self.tail = prev
 
+        def add(self, value):
+        if self.head == None:
+            self.head = Node(value, None)
+            self.tail = self.head
+        else:
+            self.tail.next = Node(value, None)
+            self.tail = self.tail.next
+        return
+
+    def print(self):
+        cur = self.head
+        while cur != None:
+            print(cur.data)
+            cur = cur.next
+
+def print_nodes(node1):
+    print("going to print the list now!")
+    cur = node1
+
+    while cur != None:
+        print(cur.data)
+        cur = cur.next
+
+def add_node(cur, value):
+    if cur == None:
+        return Node(value, None)
+    else:
+        cur.next = Node(value, None)
+        return cur.next
+
+# Create first element of the list.
+# node1 = None
+# cur = node1
+
+# for i in range(1, 5):
+#     cur = add_node(cur, i)
+#     if i == 1:
+#         node1 = cur
+
+# print_nodes(node1)
+
+lst = LinkedList()
+
+lst.add(1)
+lst.add(2)
+lst.add(3)
+lst.add(4)
+
+lst.print()

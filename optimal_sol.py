@@ -39,7 +39,6 @@ def binary_search(value, array):
     return False
     
 def solution2(numbers):
-        # write your code in Python 3.6
     smallest_positive_int = 1
     numbers.sort()
 
