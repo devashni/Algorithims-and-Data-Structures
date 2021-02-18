@@ -45,3 +45,10 @@ def sumDigits(num):
 # sumDigits(45) -> 9
 
 
+#sliding window
+
+def max_sum_subarray(arr, k):
+    max_sum = float('-inf')
+    start = 0
+    curr_sum = 0
+    

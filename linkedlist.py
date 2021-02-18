@@ -164,3 +164,27 @@ lst.add(3)
 lst.add(4)
 
 lst.print()
+
+    def reverseList(self, head: ListNode) -> ListNode:
+        #input validity check
+        if head == None:
+            return None
+        
+        #set the previous_pointer variable
+        previous_pt = None
+        
+        while True:
+            #save the 'next' node in chain in nxt variable
+            nxt = head.next
+            
+            #update the .next of the current node to previous_pointer
+            head.next = previous_pt
+            
+            #update previous_pointer to current node
+            previous_pt = head
+            
+            #point Linked List head to the new head node
+            if nxt != None:
+                head = nxt
+            else:
+                return head
