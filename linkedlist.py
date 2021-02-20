@@ -188,3 +188,5 @@ lst.print()
                 head = nxt
             else:
                 return head
+    
+

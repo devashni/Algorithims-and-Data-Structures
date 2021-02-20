@@ -67,3 +67,32 @@ def time_solution():
     print ("Time elapsed:", end_time - start_time)
 
 time_solution()
+
+#problem 2 - leetcode sliding window
+def compress(self, chars):
+    s = []
+    start = 0
+    end = 0
+    if len(chars) <2:
+        return len(chars)
+    else:
+        for i in range(0, len(chars) + 1):
+            end = i
+            if (end >= len(chars)) or (chars[start] != chars[end]):
+                sub_str = chars[start: end]
+                length = len(sub_str)
+                s.append(sub_str[0])  #append single char of the repeating group
+                if length > 1 and length < 10: #if length is less than 10
+                    s.append(str(length))
+                elif length >9:
+                    for x in str(length): #if length is less than 10
+                        s.append(x)
+                start = end       
+                sub_str = []
+    
+    #why you do this leetcode? this is pointless busy work
+    while len(chars) > 0:
+        chars.pop()
+    for x in s:
+        chars.append(x)
+    return len(chars)
