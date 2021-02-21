@@ -90,7 +90,8 @@ def compress(self, chars):
                 start = end       
                 sub_str = []
     
-    #why you do this leetcode? this is pointless busy work
+    #not needed 
+    # TODO : refactoring needed
     while len(chars) > 0:
         chars.pop()
     for x in s:
