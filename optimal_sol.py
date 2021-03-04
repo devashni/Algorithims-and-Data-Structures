@@ -92,8 +92,34 @@ def compress(self, chars):
     
     #not needed 
     # TODO : refactoring needed
-    while len(chars) > 0:
-        chars.pop()
-    for x in s:
-        chars.append(x)
-    return len(chars)
+    # while len(chars) > 0:
+    #     chars.pop()
+    # for x in s:
+    #     chars.append(x)
+    # return len(chars)
+    s[:] = chars
+
+
+def groupAnagrams(strs):
+    output = []
+    word_group = []
+    
+    if len(strs) < 2:
+        return output[strs]
+    
+    for i in range(0,len(strs)):
+        word = strs.pop(i)
+        word_group.append(word)
+        
+        for s in strs[i+1:]:
+            if len(s) == len(word):
+                for letter in word:
+                    if letter not in s:
+                        break
+                s_idx = strs.index(s)
+                anagram = strs.pop(s_idx)
+                word_group.append(anagram)
+        
+        word_group = []
+        
+    return output
