@@ -77,9 +77,6 @@ class Node(object):
                 self = self.right
                 self.insert(new_data)
             
-# t = Node(4,Node(2, Node(1), Node(3)),Node(7, Node(5), Node(8))
-# t.insert(0)
-# print(t.data.left.left.left.data)
 
 
         
