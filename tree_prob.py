@@ -1,4 +1,3 @@
-# create insert function for a binary tree
 
 """
     We'll start with this tree:
